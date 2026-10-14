@@ -49,6 +49,14 @@ const projects = [
     demoUrl: 'https://github.com/Esra412/food-delivery-desktop-manager/releases',
     repoUrl: 'https://github.com/Esra412/food-delivery-desktop-manager',
   },
+  {
+    idx: '05',
+    tagKey: 'projects.items.berries.tag',
+    titleKey: 'projects.items.berries.title',
+    descKey: 'projects.items.berries.desc',
+    tech: ['Unity', 'Game Jam'],
+    demoUrl: 'https://emiliaat.itch.io/pick-berries-for-grandma',
+  },
 ];
 
 const cvFiles = {
@@ -107,8 +115,8 @@ function renderProjects() {
         <p class="proj-desc">${tr(project.descKey, '')}</p>
         <div class="proj-tags">${project.tech.map((tech) => `<span class="proj-tag">${tech}</span>`).join('')}</div>
         <div class="proj-links">
-          <a href="${project.demoUrl || '#'}" class="proj-link" ${project.demoUrl ? 'target="_blank" rel="noopener noreferrer"' : ''}>${tr('projects.demo', 'Demo')} -></a>
-          <a href="${project.repoUrl || '#'}" class="proj-link" ${project.repoUrl ? 'target="_blank" rel="noopener noreferrer"' : ''}>${tr('projects.repo', 'Repo')}</a>
+          ${project.demoUrl ? `<a href="${project.demoUrl}" class="proj-link" target="_blank" rel="noopener noreferrer">${tr('projects.demo', 'Demo')} -></a>` : ''}
+          ${project.repoUrl ? `<a href="${project.repoUrl}" class="proj-link" target="_blank" rel="noopener noreferrer">${tr('projects.repo', 'Repo')}</a>` : ''}
         </div>
       </div>
     </div>
