@@ -42,10 +42,12 @@ const projects = [
   },
   {
     idx: '04',
-    tagKey: 'projects.items.unity.tag',
-    titleKey: 'projects.items.unity.title',
-    descKey: 'projects.items.unity.desc',
-    tech: ['C#', 'Unity', 'Krita'],
+    tagKey: 'projects.items.foodmanager.tag',
+    titleKey: 'projects.items.foodmanager.title',
+    descKey: 'projects.items.foodmanager.desc',
+    tech: ['Electron', 'React', 'TypeScript', 'PDF'],
+    demoUrl: 'https://github.com/Esra412/food-delivery-desktop-manager/releases',
+    repoUrl: 'https://github.com/Esra412/food-delivery-desktop-manager',
   },
 ];
 
