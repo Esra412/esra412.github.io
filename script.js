@@ -190,10 +190,12 @@ if (cvDownloadButton) {
   cvDownloadButton.addEventListener('click', downloadCurrentCv);
 }
 
-renderSkills();
-renderProjects();
-updateCvLanguage(getDefaultCvLanguage(localStorage.getItem('language') || 'en'));
-setupSkillsAnimation();
+document.addEventListener('DOMContentLoaded', () => {
+  renderSkills();
+  renderProjects();
+  updateCvLanguage(getDefaultCvLanguage(localStorage.getItem('language') || 'en'));
+  setupSkillsAnimation();
+});
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
