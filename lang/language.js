@@ -1,7 +1,9 @@
 ﻿let translations = {};
 
 async function loadTranslations(lang) {
-  const response = await fetch(`lang/${lang}.json`);
+  const url = `lang/${lang}.json?ts=${Date.now()}`;
+  const response = await fetch(url, { cache: 'no-store' });
+
   if (!response.ok) {
     throw new Error(`Translations could not be loaded: ${response.status}`);
   }
